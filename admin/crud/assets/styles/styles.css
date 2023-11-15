@@ -1,0 +1,343 @@
+/*-------Importante-------*/
+:root{
+    --Light-Blue: #7EBAFB;
+    --Ligt-Pink: #FB7E7E;
+    --Gray-Nigt: #14121C;
+    --Gray-Nigt-Input: rgba(20, 18, 28, 0.9);
+    --White: #FFFFFF;
+    --Black: #000000;
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+/*-------Fin Importante-------*/
+
+/*-------Scroll Bar-------*/
+::-webkit-scrollbar { width: 6px; }
+
+::-webkit-scrollbar-track { background: var(--White);}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--Light-Blue);
+}
+/*-------Fin Scroll Bar-------*/
+
+/*-------Variables-------*/
+.titulo-blanco{
+    font-size: 24px;
+    color: var(--White);
+}
+
+.titulo-oscuro{
+    font-size: 24px;
+    color: var(--Gray-Nigt);
+}
+
+.parrafo{
+    font-size: 16px;
+}
+
+.span-azul{
+    color: var(--Light-Blue) !important;
+}
+
+.span-rosado{
+    color: var(--Ligt-Pink) !important;
+}
+
+.oscuro{
+    background: var(--Gray-Nigt) !important;
+}
+
+.rosado{
+    background: var(--Ligt-Pink) !important;
+}
+
+.azul{
+    background: var(--Light-Blue) !important;
+}
+
+.blanco{
+    background: var(--White) !important;
+}
+
+.tx-blanco{
+    color: var(--White) !important;
+}
+
+.tx-oscuro{
+    color: var(--Gray-Nigt) !important;
+}
+
+.tx-azul{
+    color: var(--Light-Blue) !important;
+}
+
+.tx-rosado{
+    color: var(--Ligt-Pink) !important;
+}
+
+.btn-primary{
+    background: var(--Ligt-Pink) !important;
+    border: var(--Ligt-Pink) !important;
+}
+
+.btn-secondary{
+    background: var(--Light-Blue) !important;
+    border: var(--Light-Blue) !important;
+}
+
+.btn-dark{
+    background: var(--Gray-Nigt) !important;
+    border: var(--Gray-Nigt) !important;
+}
+
+.active{
+    background: var(--Light-Blue) !important;
+}
+
+.hover-azul{
+    animation: ease .2s ease;
+}
+
+.hover-azul:hover{
+    color: var(--Light-Blue);
+}
+
+.fs-10{
+    font-size: 10px;
+}
+/*-------Fin Variables-------*/
+
+/*-------Loader-------*/
+.carga{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: no-repeat var(--Gray-Nigt);
+    z-index: 10000;
+}
+
+.carga img{
+    margin-top: 150px;
+    width: 300px;
+    height: 300px;
+    z-index: 10000;
+}
+
+.page-loading {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all .4s .2s ease-in-out;
+    transition: all .4s .2s ease-in-out;
+    background-color: var(--Gray-Nigt) !important;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+  }
+
+.page-loading.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.page-loading-inner {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
+    opacity: 0;
+}
+
+.page-loading.active > .page-loading-inner {
+    opacity: 1;
+}
+
+.page-loading-inner > span {
+    display: block;
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--White);
+}
+
+.page-spinner {
+    display: inline-block;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-bottom: .75rem;
+    vertical-align: text-bottom;
+    border: .15em solid var(--White);
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: spinner .75s linear infinite;
+    animation: spinner .75s linear infinite;
+}
+
+  @-webkit-keyframes spinner {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spinner {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+
+/*-------Fin Loader-------*/
+
+/*-------Componentes-------*/
+/*Nav*/
+.menu li a{
+    transition: all 0.3s ease;
+    color: var(--Ligt-Pink);
+}
+
+.menu li a:hover{
+    color: var(--Light-Blue);
+}
+
+.menu-icono{
+    height: 20px;
+}
+
+.boton-nav{
+    background: var(--Ligt-Pink);
+    color: var(--Gray-Nigt);
+    transition: all 0.3s ease;
+}
+/*Fin Nav*/
+
+/*Footer*/
+.footer{
+    color: var(--White);
+}
+
+.logo-footer img{
+    width:  150px;
+    height: 150px;
+}
+
+.social-container{
+    display: flex;
+    height: 30px;
+}
+
+.social-link{
+    height: 100%;
+    width: 30px;
+    background-image: url(../img/iconos/github-icon-blanco.svg);
+    border: 1px solid var(--White);
+    border-radius: 6px;
+    background-size: 40%;
+    background-position: center;
+    margin-right: 1rem;
+    background-repeat: no-repeat;
+}
+
+footer .social-link:nth-of-type(2){
+    background-image: url(../img/iconos/instagram-icon.svg);
+}
+
+footer .social-link:nth-of-type(3){
+    background-image: url(../img/iconos/logo-google.svg);
+}
+/*Fin Footer*/
+/*-------Fin Componentes-------*/
+
+
+/*-------CSS Index-------*/
+/*Header*/
+.header-principal{
+    background: url(../img/imagenes/fondo.png) no-repeat;
+}
+
+.texto-principal{
+    font-size: 120px;
+    font-weight: 900;
+}
+/*Fin Header*/
+
+/*Section Como Funciona*/
+.step {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    color: var(--Ligt-Pink);
+}
+
+.step::after {
+    content: "";
+    border-right: 2px solid var(--White);
+    opacity: .1;
+    height: 60px;
+    position: absolute;
+    top: 40px;
+}
+
+/*Nuestro Equipo*/
+.img-speackers{
+    transition: 0.35s ease;
+}
+
+.img-speackers:hover{
+    transform: scale(1.1);
+}
+/*Fin Nuestro Equipo*/
+/*Fin Section Como Funciona*/
+/*-------Fin CSS Index-------*/
+
+/*-------CSS Cursos-------*/
+input[type="checkbox"]{
+    accent-color: var(--Ligt-Pink);
+}
+/*-------Fin CSS Cursos-------*/
+
+/*-------CSS Cursos Detalle-------*/
+/*-------Fin CSS Cursos Detalle-------*/
+
+/*-------CSS Login-------*/
+.margin-login{
+    margin-bottom: 5rem!important;
+    margin-top: 5rem!important;
+}
+/*-------Fin Login-------*/
+
+/*-------CSS About-------*/
+/*-------Fin CSS About-------*/
+
+/*-------CSS 404-------*/
+@keyframes movimiento{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.img-cuatro{
+    animation: movimiento 2.5s linear infinite;
+}
+/*-------Fin CSS 404-------*/
